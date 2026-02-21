@@ -1,148 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Bird On Head</title>
-
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-        background: #f7f7f7;
-        font-family: "Poppins", sans-serif;
-        overflow: hidden;
-    }
-
-    /* INTRO SCREEN */
-    #intro {
-        position: fixed;
-        inset: 0;
-        background: white;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        animation: fadeOut 1.5s ease forwards;
-        animation-delay: 3s;
-        z-index: 10;
-    }
-
-    .logo {
-        width: 140px;
-        height: 140px;
-        position: relative;
-        animation: float 2s ease-in-out infinite;
-    }
-
-    /* Simple bird-on-head icon */
-    .head {
-        width: 70px;
-        height: 70px;
-        background: #222;
-        border-radius: 50%;
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .bird {
-        width: 50px;
-        height: 35px;
-        background: #ffcc33;
-        border-radius: 50px 50px 40px 40px;
-        position: absolute;
-        top: -10px;
-        left: 50%;
-        transform: translateX(-50%);
-        animation: birdHop 0.8s ease-in-out infinite;
-    }
-
-    @keyframes birdHop {
-        0% { transform: translateX(-50%) translateY(0); }
-        50% { transform: translateX(-50%) translateY(-8px); }
-        100% { transform: translateX(-50%) translateY(0); }
-    }
-
-    @keyframes float {
-        0% { transform: translateY(0); }
-        50% { transform: translateY(-6px); }
-        100% { transform: translateY(0); }
-    }
-
-    #intro h1 {
-        margin-top: 20px;
-        font-size: 28px;
-        font-weight: 600;
-        color: #222;
-        opacity: 0;
-        animation: fadeIn 1.2s ease forwards;
-        animation-delay: 1s;
-    }
-
-    @keyframes fadeIn {
-        to { opacity: 1; }
-    }
-
-    @keyframes fadeOut {
-        to { opacity: 0; visibility: hidden; }
-    }
-
-    /* HOMEPAGE */
-    #home {
-        opacity: 0;
-        animation: homeFadeIn 1.5s ease forwards;
-        animation-delay: 3.2s;
-        text-align: center;
-        padding-top: 20vh;
-    }
-
-    @keyframes homeFadeIn {
-        to { opacity: 1; }
-    }
-
-    h2 {
-        font-size: 42px;
-        margin: 0;
-        color: #222;
-    }
-
-    p.subtitle {
-        font-size: 20px;
-        margin-top: 10px;
-        color: #555;
-    }
-
-    footer {
-        position: fixed;
-        bottom: 20px;
-        width: 100%;
-        text-align: center;
-        color: #777;
-        font-size: 14px;
-    }
-</style>
+  <meta charset="UTF-8" />
+  <title>Andrew — cozy sky corner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
+  <div class="page" id="top">
+    <!-- Site header -->
+    <header class="site-header">
+      <h1 class="site-title">Andrew’s cozy corner</h1>
+      <p class="site-subtitle">gentle, dreamy, slightly absurd — and deeply sincere</p>
+    </header>
 
-<!-- INTRO ANIMATION -->
-<div id="intro">
-    <div class="logo">
-        <div class="bird"></div>
-        <div class="head"></div>
-    </div>
-    <h1>BirdOnHead Brand</h1>
-</div>
+    <!-- About Me -->
+    <section class="section about" aria-labelledby="about-title">
+      <div class="about-header">
+        <img src="assets/images/header-banner.gif" alt="Whimsical banner" class="about-banner" />
+        <h2 id="about-title" class="section-title">
+          About me
+          <img src="assets/images/star.gif" alt="" aria-hidden="true" class="inline-gif" />
+        </h2>
+      </div>
 
-<!-- HOMEPAGE -->
-<div id="home">
-    <h2>Bird On Head</h2>
-    <p class="subtitle">A personal site</p>
-</div>
+      <div class="card about-card">
+        <p>
+          Hi, I’m <strong>Andrew</strong>. My brain is a foggy chalkboard that keeps doodling cats, clouds, and half‑finished ideas.
+          I have a boyfriend named <strong>Jett</strong>, who is impressively patient while I rebuild my site for the fifteenth time
+          and declare “this is the one.” I like watching anime and movies in that late‑night pocket where time slows down and the quiet
+          hum of the world turns into a soft soundtrack.
+        </p>
+        <p>
+          This site is my small‑town sky: gentle, cozy, a little surreal. I want pages that breathe, headers that feel like wooden beams
+          you can sit on, and text that glows softly without shouting. Not everything needs an explanation — sometimes a warm hue or a silly
+          cat tells the whole story. I’m silly, floaty, occasionally productive, and happily curious.
+        </p>
+        <p>
+          If you’re here, welcome to my pocket dimension. There are no tests, no perfect answers — just an invitation to wander. I’m not
+          optimizing for maximum output; I’m collecting moments that feel true. Honestly? I’m just here to vibe, ahaha.
+        </p>
+      </div>
+    </section>
 
-<footer>BOH Co.</footer>
+    <!-- Journal / Blog -->
+    <section class="section journal" aria-labelledby="journal-title">
+      <h2 id="journal-title" class="section-title">
+        Journal / blog
+        <img src="assets/images/notebook.gif" alt="" aria-hidden="true" class="inline-gif" />
+      </h2>
 
+      <div class="card journal-card">
+        <article class="entry">
+          <div class="entry-meta">
+            <h3 class="entry-title">Late‑night vibes</h3>
+            <time class="entry-date" datetime="2025-12-17">December 17, 2025</time>
+          </div>
+          <p class="entry-body">
+            Stayed up too late watching anime again. My brain is a fog machine but the vibes were immaculate. A good cloud day.
+          </p>
+        </article>
+
+        <article class="entry">
+          <div class="entry-meta">
+            <h3 class="entry-title">Site expansion</h3>
+            <time class="entry-date" datetime="2025-12-15">December 15, 2025</time>
+          </div>
+          <p class="entry-body">
+            Added Journal, Music, and Timeline. Feels like building a tiny town where everything is soft and sincere.
+          </p>
+        </article>
+
+        <!-- Add new entries above this line -->
+      </div>
+    </section>
+
+    <!-- Music & Playlists -->
+    <section class="section music" aria-labelledby="music-title">
+      <h2 id="music-title" class="section-title">
+        Music & playlists
+        <img src="assets/images/music-note.gif" alt="" aria-hidden="true" class="inline-gif" />
+      </h2>
+
+      <div class="card music-card">
+        <p class="section-intro">Songs I vibe with — sometimes silly, sometimes dreamy.</p>
+        <ul class="playlist">
+          <li><strong>“You Are My Sunshine”</strong> — cozy classic 🌞</li>
+          <li><strong>“Uptown Funk”</strong> — dance break 💃</li>
+          <li><strong>“Great Pretender”</strong> — anime soundtrack magic 🎶</li>
+        </ul>
+
+        <!-- Optional: replace the src with your real playlist ID -->
+        <div class="embed-wrap">
+          <iframe class="spotify-embed" title="Spotify playlist"
+            src="https://open.spotify.com/embed/playlist/yourplaylistid"
+            width="100%" height="152" frameborder="0" allow="encrypted-media"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline / Milestones -->
+    <section class="section timeline" aria-labelledby="timeline-title">
+      <h2 id="timeline-title" class="section-title">
+        Timeline / milestones
+        <img src="assets/images/clock.gif" alt="" aria-hidden="true" class="inline-gif" />
+      </h2>
+
+      <div class="card timeline-card">
+        <ul class="timeline-list">
+          <li>
+            <span class="milestone-dot" aria-hidden="true"></span>
+            <span class="milestone-date">Dec 2025</span>
+            <span class="milestone-text">Launched my cozy site ✨</span>
+          </li>
+          <li>
+            <span class="milestone-dot" aria-hidden="true"></span>
+            <span class="milestone-date">Nov 2025</span>
+            <span class="milestone-text">Finished Naruto (finally!) 🍥</span>
+          </li>
+          <li>
+            <span class="milestone-dot" aria-hidden="true"></span>
+            <span class="milestone-date">Oct 2025</span>
+            <span class="milestone-text">Started One Piece voyage 🏴‍☠️</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact" aria-labelledby="contact-title">
+      <h2 id="contact-title" class="section-title">
+        Contact
+        <img src="assets/images/mail.gif" alt="" aria-hidden="true" class="inline-gif" />
+      </h2>
+
+      <div class="card contact-card">
+        <p>Say hi: <a href="mailto:leanna@5amwithleanna.online">leanna@5amwithleanna.online</a></p>
+        <p class="small-note">Emails read like postcards — short, sweet, possibly with a cat sticker.</p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <nav class="footer-nav">
+        <a href="#top" class="footer-link">Back to top</a>
+      </nav>
+      <p class="footer-copy">© 2025 Andrew — built with cozy clarity.</p>
+    </footer>
+  </div>
 </body>
 </html>
