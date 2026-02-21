@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Bird On Head</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: #f7f7f7;
+        font-family: "Poppins", sans-serif;
+        overflow: hidden;
+    }
+
+    /* INTRO SCREEN */
+    #intro {
+        position: fixed;
+        inset: 0;
+        background: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        animation: fadeOut 1.5s ease forwards;
+        animation-delay: 3s;
+        z-index: 10;
+    }
+
+    .logo {
+        width: 140px;
+        height: 140px;
+        position: relative;
+        animation: float 2s ease-in-out infinite;
+    }
+
+    /* Simple bird-on-head icon */
+    .head {
+        width: 70px;
+        height: 70px;
+        background: #222;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .bird {
+        width: 50px;
+        height: 35px;
+        background: #ffcc33;
+        border-radius: 50px 50px 40px 40px;
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: birdHop 0.8s ease-in-out infinite;
+    }
+
+    @keyframes birdHop {
+        0% { transform: translateX(-50%) translateY(0); }
+        50% { transform: translateX(-50%) translateY(-8px); }
+        100% { transform: translateX(-50%) translateY(0); }
+    }
+
+    @keyframes float {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(-6px); }
+        100% { transform: translateY(0); }
+    }
+
+    #intro h1 {
+        margin-top: 20px;
+        font-size: 28px;
+        font-weight: 600;
+        color: #222;
+        opacity: 0;
+        animation: fadeIn 1.2s ease forwards;
+        animation-delay: 1s;
+    }
+
+    @keyframes fadeIn {
+        to { opacity: 1; }
+    }
+
+    @keyframes fadeOut {
+        to { opacity: 0; visibility: hidden; }
+    }
+
+    /* HOMEPAGE */
+    #home {
+        opacity: 0;
+        animation: homeFadeIn 1.5s ease forwards;
+        animation-delay: 3.2s;
+        text-align: center;
+        padding-top: 20vh;
+    }
+
+    @keyframes homeFadeIn {
+        to { opacity: 1; }
+    }
+
+    h2 {
+        font-size: 42px;
+        margin: 0;
+        color: #222;
+    }
+
+    p.subtitle {
+        font-size: 20px;
+        margin-top: 10px;
+        color: #555;
+    }
+
+    footer {
+        position: fixed;
+        bottom: 20px;
+        width: 100%;
+        text-align: center;
+        color: #777;
+        font-size: 14px;
+    }
+</style>
+</head>
+
+<body>
+
+<!-- INTRO ANIMATION -->
+<div id="intro">
+    <div class="logo">
+        <div class="bird"></div>
+        <div class="head"></div>
+    </div>
+    <h1>BirdOnHead Brand</h1>
+</div>
+
+<!-- HOMEPAGE -->
+<div id="home">
+    <h2>Bird On Head</h2>
+    <p class="subtitle">A personal site</p>
+</div>
+
+<footer>BOH Co.</footer>
+
+</body>
+</html>
