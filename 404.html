@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>404 - Lost in the Spirit World</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Reset */
+    * { box-sizing: border-box; margin:0; padding:0; }
+
+    body {
+      background: linear-gradient(180deg, #2a2e59 0%, #6e84a3 100%);
+      color: #fffdf8;
+      font-family: 'Trebuchet MS', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 90px;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 20px;
+      opacity: 0.9;
+      margin-bottom: 30px;
+    }
+
+    .iframe-container {
+      width: 320px;
+      height: 320px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+      margin-bottom: 30px;
+      transition: transform 0.3s ease;
+    }
+
+    .iframe-container:hover {
+      transform: scale(1.05);
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .home-btn {
+      padding: 14px 28px;
+      background: #f9f0e3;
+      color: #2a2e59;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+      transition: all 0.25s ease;
+    }
+
+    .home-btn:hover {
+      background: #fff7e6;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+      transform: translateY(-2px);
+    }
+
+    /* optional floating particle stars for vibe */
+    .star {
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      background: #fffdf8;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: floatStar 5s infinite;
+    }
+
+    @keyframes floatStar {
+      0% { transform: translateY(0) rotate(0deg); opacity: 0.8;}
+      50% { transform: translateY(-20px) rotate(180deg); opacity: 0.3;}
+      100% { transform: translateY(0) rotate(360deg); opacity: 0.8;}
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>404</h1>
+  <p>oh… seems you’ve wandered into the spirit world. try heading back?</p>
+
+  <div class="iframe-container">
+    <!-- replace this src with your Pinterest embed link -->
+    <iframe src="https://assets.pinterest.com/ext/embed.html?id=16044142417242414" height="281" width="345" frameborder="0" scrolling="no" ></iframe>
+
+  <a href="/" class="home-btn">Go Back Home</a>
+
+  <!-- optional floating stars -->
+  <div class="star" style="top:10%; left:15%; animation-delay:0s;"></div>
+  <div class="star" style="top:40%; left:70%; animation-delay:2s;"></div>
+  <div class="star" style="top:75%; left:50%; animation-delay:4s;"></div>
+
+</body>
+</html>
