@@ -1,72 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>404 ✨ Lost Among the Flowers</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: url('assets/images/flowers-bg.jpg') no-repeat center center fixed;
-      background-size: cover;
-      font-family: "Comic Sans MS", cursive, sans-serif;
-      color: #fff0f6;
-      text-align: center;
-    }
-    .overlay {
-      background: rgba(0, 0, 0, 0.5);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 2em;
-    }
-    h1 {
-      font-size: 4em;
-      margin-bottom: 0.2em;
-      color: #ffb6c1;
-      text-shadow: 2px 2px #000;
-    }
-    p {
-      font-size: 1.3em;
-      margin: 0.5em 0;
-    }
-    .gif {
-      margin-top: 1.5em;
-    }
-    .gif img {
-      max-width: 320px;
-      border-radius: 12px;
-      box-shadow: 0 0 25px rgba(255, 182, 193, 0.9);
-    }
-    a {
-      display: inline-block;
-      margin-top: 2em;
-      padding: 0.8em 1.2em;
-      background: #ffb6c1;
-      color: #1a1a1a;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: transform 0.2s ease, background 0.2s ease;
-    }
-    a:hover {
-      transform: scale(1.1);
-      background: #ff69b4;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <title>404 Page not found</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./assets/images/favicon.png" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-  <div class="overlay">
-    <h1>404 ✨</h1>
-    <p>you wandered into the flower fields…</p>
-    <p>but this page doesn’t exist 🌸</p>
-    <div class="gif">
-      <img src="assets/images/404.gif" alt="Lost gif">
-    </div>
-    <a href="/">take me home 🏠</a>
+  <div class="page" id="top">
+    <!-- Site header -->
+    <header class="site-header">
+      <h1 class="site-title">404</h1>
+      <p class="site-subtitle">uh oh… this Page doesn’t exist, as you'd figure by taking a look of what you entered, you little silly ball.</p>
+    </header>
+
+    <!-- Error Section -->
+    <section class="section error" aria-labelledby="error-title">
+      <div class="error-header">
+        <img src="assets/images/404.gif" alt="Lost gif" class="error-banner" />
+        <h2 id="error-title" class="section-title">
+          You wandered off the path
+          <img src="assets/images/star.gif" alt="" aria-hidden="true" class="inline-gif" />
+        </h2>
+      </div>
+
+      <div class="card error-card">
+        <p>
+          You do realize this isn’t an actual page, right? But you still entered it wow.
+        </p>
+
+        <p>
+          Was this on purpose be honest, dawg.
+        </p>
+
+        <p>
+          Go head back home?  
+        </p>
+
+        <a href="/" class="home-link">take me home 🏠</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <nav class="footer-nav">
+        <a href="/" class="footer-link">Back to site</a>
+      </nav>
+      <p class="footer-copy">© 2025 Andrew — even errors have swag.</p>
+    </footer>
   </div>
 </body>
 </html>
